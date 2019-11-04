@@ -13,7 +13,7 @@ UI.prototype.addBookToList = function(book) {
     const list = document.getElementById("book-list");
      //Create tr element
      const row = document.createElement("tr");
-     console.log(row);
+     
      //Insert cols
      row.innerHTML = `
      <td>${book.title}</td>
@@ -79,13 +79,13 @@ document.getElementById("book-form").addEventListener("submit", function(e){
     } else{
         //Add book to list
         ui.addBookToList(book);
-    }
     
-    //Show success
-    ui.showAlert("Book added!", "success");
+        //Show success
+        ui.showAlert("Book added!", "success");
 
-    //Clear fields
-    ui.clearFields();
+        //Clear fields
+        ui.clearFields();
+    }
 
     e.preventDefault();
 });
